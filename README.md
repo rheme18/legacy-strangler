@@ -1,12 +1,27 @@
-# Legacy Strangler
+<p align="center">
+  <img src=".agents/skills/legacy-strangler/assets/icon.svg" alt="Legacy Strangler icon" width="84">
+</p>
 
-> **Modernize legacy systems one verified boundary at a time.**
+<hr>
+
+<h1 align="center">Legacy Strangler</h1>
+
+<p align="center"><em>Modernize legacy systems one verified boundary at a time.</em></p>
+
+<p align="center">
+  <a href="https://github.com/rheme18/legacy-strangler/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/rheme18/legacy-strangler?style=flat-square"></a>
+  <a href="https://github.com/rheme18/legacy-strangler/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/rheme18/legacy-strangler?style=flat-square"></a>
+  <a href="https://github.com/rheme18/legacy-strangler/commits/main/"><img alt="Last commit" src="https://img.shields.io/github/last-commit/rheme18/legacy-strangler?style=flat-square"></a>
+  <img alt="Python standard library only" src="https://img.shields.io/badge/Python-standard%20library-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="No runtime dependencies" src="https://img.shields.io/badge/runtime%20dependencies-none-2E8B57?style=flat-square">
+  <img alt="Codex, Claude Code, Cursor, Antigravity" src="https://img.shields.io/badge/agents-Codex%20%7C%20Claude%20%7C%20Cursor%20%7C%20Antigravity-6C5CE7?style=flat-square">
+</p>
+
+<hr>
 
 `legacy-strangler` is a portable Agent Skill for incremental software modernization. It gives coding agents a disciplined migration workflow based on the Strangler Fig pattern: understand the dependency graph, lock current behavior with characterization tests, introduce a parallel implementation behind a seam, and cut over only when the evidence supports it.
 
 It is designed for migrations such as JavaScript → TypeScript, jQuery → React, Flask/PHP → Node.js/FastAPI, class components → hooks, framework upgrades, and replacement of legacy services. The package includes a dependency mapper, a migration-plan template, and a deliberately tricky shopping-cart fixture.
-
-![Legacy Strangler skill icon](.agents/skills/legacy-strangler/assets/icon.svg)
 
 ## Why AI agents fail at large migrations
 
@@ -75,18 +90,18 @@ legacy-strangler/
 
 ### Recommended: Skills CLI
 
-After publishing this repository to GitHub, replace `<owner>` with its GitHub owner and run this from the target project:
+Install from the published GitHub repository in your target project:
 
 ```sh
-npx skills add <owner>/legacy-strangler --skill legacy-strangler
+npx skills add rheme18/legacy-strangler --skill legacy-strangler
 ```
 
 The CLI can prompt you for the agent(s) and scope. To select an agent explicitly, for example:
 
 ```sh
-npx skills add <owner>/legacy-strangler --skill legacy-strangler --agent codex
-npx skills add <owner>/legacy-strangler --skill legacy-strangler --agent claude-code
-npx skills add <owner>/legacy-strangler --skill legacy-strangler --agent cursor
+npx skills add rheme18/legacy-strangler --skill legacy-strangler --agent codex
+npx skills add rheme18/legacy-strangler --skill legacy-strangler --agent claude-code
+npx skills add rheme18/legacy-strangler --skill legacy-strangler --agent cursor
 ```
 
 Run `npx skills add --help` for current options. The CLI supports many agents and installs into their expected skill location. You can install per project (default) or globally with `-g`. For Antigravity, keep the skill in the workspace `.agents/skills/` directory or install it into Antigravity's global skills directory as described below.
@@ -212,7 +227,7 @@ The skill is plain Markdown plus a Python standard-library script and SVG asset.
 
 ## Before publishing
 
-1. Replace `<owner>` in the install examples after the GitHub repository owner is known.
+1. Check that the install command points to `rheme18/legacy-strangler` and works from a clean project.
 2. Run the mapper against both the sample and repository root, and inspect JSON output.
 3. Validate the `SKILL.md` frontmatter, check all referenced paths, and render the SVG icon in a browser or image viewer.
 4. Copy the skill to each agent's native discovery path and confirm the agent can load its script and plan template.
