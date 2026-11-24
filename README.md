@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".agents/skills/legacy-strangler/assets/icon.svg" alt="Legacy Strangler icon" width="84">
+  <img src=".agents/skills/legacy-strangler/assets/icon.svg" alt="Legacy Strangler icon" width="90">
 </p>
 
 <hr>
